@@ -1,5 +1,0 @@
-{
-    "dotnet.defaultSolution": "WorkerService1.sln",
-    "java.compile.nullAnalysis.mode": "automatic",
-    "java.configuration.updateBuildConfiguration": "automatic"
-}
