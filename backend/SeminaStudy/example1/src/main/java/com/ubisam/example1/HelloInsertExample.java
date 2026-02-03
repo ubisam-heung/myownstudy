@@ -43,6 +43,11 @@ public class HelloInsertExample implements ApplicationRunner {
     @Override
     public void run(ApplicationArguments args) throws Exception {
         log.info("HelloInsertExample running at startup");
-        insertOrUpdateHello();
+        try {
+            insertOrUpdateHello();
+        } catch (Exception e) {
+            // don't fail application startup if DB is unavailable; log and continue
+            log.error("Failed to insert/update Hello at startup: {}", e.getMessage(), e);
+        }
     }
 }
