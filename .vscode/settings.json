@@ -1,3 +1,4 @@
 {
-    "dotnet.defaultSolution": "WorkerService1.sln"
+    "dotnet.defaultSolution": "WorkerService1.sln",
+    "java.compile.nullAnalysis.mode": "automatic"
 }
