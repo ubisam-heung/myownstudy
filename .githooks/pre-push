@@ -1,0 +1,17 @@
+#!/usr/bin/env pwsh
+# Pre-push hook: ensure commit messages for your commits follow the date-prefix format.
+$script = Join-Path $PSScriptRoot '..\scripts\ensure_dated_commits.ps1'
+if (-not (Test-Path $script)) { exit 0 }
+
+# Run check; if it rewrites and pushes (exit code 2), abort the current push and ask user to re-run
+pwsh -NoProfile -ExecutionPolicy Bypass $script -OnPush
+$rc = $LASTEXITCODE
+if ($rc -eq 2) {
+    Write-Output "Commit messages were rewritten and pushed. Aborting original push; please run 'git push' again if needed."
+    exit 1
+} elseif ($rc -ne 0) {
+    Write-Output "Failed to ensure dated commit messages (exit $rc); aborting push."
+    exit 1
+}
+
+exit 0
