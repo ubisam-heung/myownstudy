@@ -1,0 +1,14 @@
+/Users/heungjae/Develop/Ubisam/SmartFactoryMini/bin/Debug/net10.0/SmartFactoryMini
+/Users/heungjae/Develop/Ubisam/SmartFactoryMini/bin/Debug/net10.0/SmartFactoryMini.deps.json
+/Users/heungjae/Develop/Ubisam/SmartFactoryMini/bin/Debug/net10.0/SmartFactoryMini.runtimeconfig.json
+/Users/heungjae/Develop/Ubisam/SmartFactoryMini/bin/Debug/net10.0/SmartFactoryMini.dll
+/Users/heungjae/Develop/Ubisam/SmartFactoryMini/bin/Debug/net10.0/SmartFactoryMini.pdb
+/Users/heungjae/Develop/Ubisam/SmartFactoryMini/obj/Debug/net10.0/SmartFactoryMini.GeneratedMSBuildEditorConfig.editorconfig
+/Users/heungjae/Develop/Ubisam/SmartFactoryMini/obj/Debug/net10.0/SmartFactoryMini.AssemblyInfoInputs.cache
+/Users/heungjae/Develop/Ubisam/SmartFactoryMini/obj/Debug/net10.0/SmartFactoryMini.AssemblyInfo.cs
+/Users/heungjae/Develop/Ubisam/SmartFactoryMini/obj/Debug/net10.0/SmartFactoryMini.csproj.CoreCompileInputs.cache
+/Users/heungjae/Develop/Ubisam/SmartFactoryMini/obj/Debug/net10.0/SmartFactoryMini.dll
+/Users/heungjae/Develop/Ubisam/SmartFactoryMini/obj/Debug/net10.0/refint/SmartFactoryMini.dll
+/Users/heungjae/Develop/Ubisam/SmartFactoryMini/obj/Debug/net10.0/SmartFactoryMini.pdb
+/Users/heungjae/Develop/Ubisam/SmartFactoryMini/obj/Debug/net10.0/SmartFactoryMini.genruntimeconfig.cache
+/Users/heungjae/Develop/Ubisam/SmartFactoryMini/obj/Debug/net10.0/ref/SmartFactoryMini.dll
