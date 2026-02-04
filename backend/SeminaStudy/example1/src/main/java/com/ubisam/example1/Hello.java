@@ -21,8 +21,8 @@ public class Hello {
         sequenceName = "T_STR_SEQ",
         allocationSize = 1
     )
-    @Column(name = "ID")
     private Long id;
+
 
     @Column(name = "NAME", nullable = false)
     private String name;
