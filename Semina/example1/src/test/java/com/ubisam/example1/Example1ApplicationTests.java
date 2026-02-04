@@ -21,6 +21,18 @@ class Example1ApplicationTests {
 
 		h = helloRepository.save(h);
 
+        System.out.println("=== findByEmail ===");
+        helloRepository.findByEmail("abc@ubisam.com")
+            .forEach(x -> System.out.println("id=" + x.getId()));
+
+        System.out.println("=== findByNameAndEmail ===");
+        helloRepository.findByNameAndEmail("name1", "abc@ubisam.com")
+            .forEach(x -> System.out.println("id=" + x.getId()));
+
+        System.out.println("=== findByIdOrName ===");
+        helloRepository.findByIdOrName(h.getId(), "name1")
+            .forEach(x -> System.out.println("id=" + x.getId()));
+
 		// Read
 		Optional<Hello> h2 = helloRepository.findById(1l);
 		System.out.println(h.getId());
