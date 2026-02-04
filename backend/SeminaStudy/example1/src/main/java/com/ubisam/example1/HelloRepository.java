@@ -1,12 +1,8 @@
 package com.ubisam.example1;
 
+import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import java.util.List;
-
-
-public interface HelloRepository extends JpaRepository<Hello, Long>{
+public interface HelloRepository extends JpaRepository<Hello, Long> {
     List<Hello> findByEmail(String email);
-    List<Hello> findByNameAndEmail(String name, String email);
-    List<Hello> findByIdOrName(Long id, String name);
 }

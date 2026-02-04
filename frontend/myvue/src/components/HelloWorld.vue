@@ -11,6 +11,8 @@ defineProps<{
       You’ve successfully created a project with
       <a href="https://vite.dev/" target="_blank" rel="noopener">Vite</a> +
       <a href="https://vuejs.org/" target="_blank" rel="noopener">Vue 3</a>. What's next?
+      checking for mt the welcome vue site for checking where this sentence is.
+      spring boot + vue 3 connection
     </h3>
   </div>
 </template>
