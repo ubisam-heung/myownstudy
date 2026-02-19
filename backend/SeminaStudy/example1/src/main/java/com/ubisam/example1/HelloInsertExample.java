@@ -27,7 +27,7 @@ public class HelloInsertExample implements ApplicationRunner {
         List<Hello> existing = helloRepository.findByEmail(email);
         Hello hello;
         if (existing != null && !existing.isEmpty()) {
-            hello = existing.get(0);
+            hello = existing.getFirst();
             hello.setName(name); // overwrite existing data
             hello.setEmail(email);
             log.info("Updating existing Hello with email={}", email);
