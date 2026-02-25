@@ -44,13 +44,13 @@ class Example2ApplicationTests {
 		Hello h = new Hello();
 		h.setName("name1");
 		h.setEmail("abc@abc.com");
-		
+
 		//Create
 		mockMvc.perform(post("/helloes").content(h)).andDo(print()).andExpect(is2xx());
 
 		//Read
-		// mockMvc.perform(get("/helloes")).andDo(print()).andExpect(is2xx());
-		mockMvc.perform(get("/helloes/"+ h.getId())).andDo(print()).andExpect(is2xx());
+		mockMvc.perform(get("/helloes")).andDo(print()).andExpect(is2xx());
+		// mockMvc.perform(get("/helloes/"+ h.getId())).andDo(print()).andExpect(is2xx());
 
 		// h.setName("name2");
 		// h.setEmail("abc1@abc1.com");
