@@ -19,12 +19,12 @@ public class HelloHandler {
         //역할 제한
         // throw new RuntimeException();
 
-        System.out.println("22222222222222222222222222222222222");
+        System.out.println("[beforeCreate] testtesttesttesttesttesttesttest");
     }
 
     @HandleAfterCreate
     public void afterCreate(Hello hello){
-        //오디에이팅(로그찍기)
-        System.out.println("111111111111111111111111111111111111111");
+        //Auditing(추적)
+        System.out.println("[afterCreate] testtesttesttesttesttesttesttest");
     }
 }

@@ -1,6 +1,5 @@
 package com.ubisam.example2;
 
-import static io.u2ware.common.docs.MockMvcRestDocs.*;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
@@ -9,6 +8,11 @@ import org.springframework.test.web.servlet.MockMvc;
 
 import com.ubisam.example2.helloes.Hello;
 import com.ubisam.example2.helloes.HelloRepository;
+
+import static io.u2ware.common.docs.MockMvcRestDocs.get;
+import static io.u2ware.common.docs.MockMvcRestDocs.is2xx;
+import static io.u2ware.common.docs.MockMvcRestDocs.post;
+import static io.u2ware.common.docs.MockMvcRestDocs.print;
 
 
 @SpringBootTest
@@ -40,9 +44,24 @@ class Example2ApplicationTests {
 		Hello h = new Hello();
 		h.setName("name1");
 		h.setEmail("abc@abc.com");
-		//save
+		
+		//Create
 		mockMvc.perform(post("/helloes").content(h)).andDo(print()).andExpect(is2xx());
 
-		mockMvc.perform(get("/helloes")).andDo(print()).andExpect(is2xx());
+		//Read
+		// mockMvc.perform(get("/helloes")).andDo(print()).andExpect(is2xx());
+		mockMvc.perform(get("/helloes/"+ h.getId())).andDo(print()).andExpect(is2xx());
+
+		// h.setName("name2");
+		// h.setEmail("abc1@abc1.com");
+
+		//Update
+		// mockMvc.perform(put("/helloes/1").content(h)).andDo(print()).andExpect(is2xx());
+
+		//Delete
+		// mockMvc.perform(delete("/helloes/1").content(h)).andDo(print()).andExpect(is2xx());
+
+		//Read
+		// mockMvc.perform(get("/helloes")).andDo(print()).andExpect(is2xx());
 	}
 }
