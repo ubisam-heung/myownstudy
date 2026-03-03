@@ -1,6 +1,10 @@
-﻿# Node
+HELP.md
+
+# Node
 node_modules/
 **/node_modules/
+.mvn/
+
 # Java
 target/
 **/target/
