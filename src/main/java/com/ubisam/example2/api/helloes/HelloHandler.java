@@ -43,7 +43,7 @@ public class HelloHandler {
 
         JpaSpecificationBuilder<Hello> query = JpaSpecificationBuilder.of(Hello.class);
         query.where()
-            .and().eq("id", hello.getId()).build(spec);
+            .and().eq("id", hello.getHelloId()).build(spec);
     }
 
     @HandleBeforeSave
@@ -52,7 +52,7 @@ public class HelloHandler {
 
         JpaSpecificationBuilder<Hello> query = JpaSpecificationBuilder.of(Hello.class);
         query.where()
-            .and().eq("id", hello.getId()).build(); 
+            .and().eq("id", hello.getHelloId()).build(); 
     }
 
     @HandleBeforeDelete
@@ -61,6 +61,6 @@ public class HelloHandler {
 
         JpaSpecificationBuilder<Hello> query = JpaSpecificationBuilder.of(Hello.class);
         query.where()
-            .and().eq("id", hello.getId()).build(); 
+            .and().eq("id", hello.getHelloId()).build(); 
     }
 }
