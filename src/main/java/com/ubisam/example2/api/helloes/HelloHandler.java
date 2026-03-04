@@ -3,6 +3,8 @@ package com.ubisam.example2.api.helloes;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.data.rest.core.annotation.HandleAfterCreate;
 import org.springframework.data.rest.core.annotation.HandleBeforeCreate;
+import org.springframework.data.rest.core.annotation.HandleBeforeDelete;
+import org.springframework.data.rest.core.annotation.HandleBeforeSave;
 import org.springframework.data.rest.core.annotation.RepositoryEventHandler;
 import org.springframework.stereotype.Component;
 
@@ -41,6 +43,24 @@ public class HelloHandler {
 
         JpaSpecificationBuilder<Hello> query = JpaSpecificationBuilder.of(Hello.class);
         query.where()
-            .and().eq("name", hello.getKeyword()).build(spec);
+            .and().eq("id", hello.getId()).build(spec);
+    }
+
+    @HandleBeforeSave
+    public void beforeSave(Hello hello){
+        System.out.println("[beforeSave] testtesttesttesttesttesttesttest");
+
+        JpaSpecificationBuilder<Hello> query = JpaSpecificationBuilder.of(Hello.class);
+        query.where()
+            .and().eq("id", hello.getId()).build(); 
+    }
+
+    @HandleBeforeDelete
+    public void beforeDelete(Hello hello){
+        System.out.println("[beforeDelete] testtesttesttesttesttesttesttest");
+
+        JpaSpecificationBuilder<Hello> query = JpaSpecificationBuilder.of(Hello.class);
+        query.where()
+            .and().eq("id", hello.getId()).build(); 
     }
 }

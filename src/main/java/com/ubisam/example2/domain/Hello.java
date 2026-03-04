@@ -24,6 +24,8 @@ public class Hello {
     @Transient
     private String keyword;
 
+    @Transient
+    private Long helloId;
     // @ManyToOne
     // private Hello hello;
 
