@@ -6,8 +6,9 @@ import org.springframework.stereotype.Component;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
-import com.ubisam.example1.api.helloes.HelloRepository;
-import com.ubisam.example1.domain.Hello;
+
+import com.ubisam.example2.api.helloes.HelloRepository;
+import com.ubisam.example2.domain.Hello;
 
 import io.u2ware.common.stomp.client.WebsocketStompClient;
 import io.u2ware.common.stomp.client.WebsocketStompClientHandler;
